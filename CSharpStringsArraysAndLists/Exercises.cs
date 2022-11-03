@@ -48,6 +48,14 @@ namespace CSharpStringsArraysAndLists
         {
             List<double> temps = new List<double>();
             temps.Add(22);
+            temps.Add(20);
+            temps.Add(12);
+            temps.Add(17);
+            temps.Add(27);
+            temps.Add(23);
+            temps.Add(19);
+            temps.Add(29);
+            temps.Add(22);
             temps.Add(4);
             temps.Add(18);
             temps.Add(17);
