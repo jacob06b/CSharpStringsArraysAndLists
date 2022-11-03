@@ -16,16 +16,72 @@ namespace CSharpStringsArraysAndLists
         // 1: Arrays
         // Create an array of doubles each of which holds three coordinates
         // Print these to the screen
-
-        // 2: Byte Arrays
-        // i) Create an array of bytes that represents the word hello. Convert this to a string and output the result.
-        // ii) Convert the word hello both in Chinese and in English to bytes. Output the byte array. 
-
+        public static void coordinates()
+        {
+            double xcoord = 23.36547d;
+            double ycoord = 92.45435d;
+            double zcoord = 1.4059d;
+            double[] location = new double[3];
+            location[0] = xcoord;
+            location[1] = ycoord;
+            location[2] = zcoord;
+            Console.WriteLine(String.Join(", ", location));
+            
+        }
+    // 2: Byte Arrays
+    // i) Create an array of bytes that represents the word hello. Convert this to a string and output the result.
+    // ii) Convert the word hello both in Chinese and in English to bytes. Output the byte array. 
+    public static void byteArray()
+        {
+            string string1 = "hello";
+            string string2 = "你好";
+            byte[] byteA = Encoding.ASCII.GetBytes(string1);
+            Console.WriteLine(String.Join(", ", byteA));
+            byte[] byteB = Encoding.ASCII.GetBytes(string2);
+            Console.WriteLine(String.Join(", ", byteB));
+        }
         // 3: Temperatures
         // Populate a list of doubles to represent daily temperatures over two weeks
         // Calculate and output the min, max and average temperatures over the time period
         // Sort the list in ascending order and print it out
+    public static void Temperatures()
+        {
+            List<double> temps = new List<double>();
+            temps.Add(22);
+            temps.Add(4);
+            temps.Add(18);
+            temps.Add(17);
+            temps.Add(7);
+            temps.Add(9);
 
+            double minTemp = temps[1];
+            double maxTemp = 0;
+            double tempTotal = 0;
+
+
+            for (int i = 0; i < temps.Count - 1; i++)
+            {
+                if (temps[i] > maxTemp)
+                {
+                    maxTemp = temps[i];
+                }
+                else if (temps[i] < minTemp)
+                {
+                    minTemp = temps[i];
+                }
+                tempTotal += temps[i];
+            }
+            double averageTemp = tempTotal / temps.Count;
+            
+            Console.WriteLine(maxTemp);
+            Console.WriteLine(minTemp);
+            Console.WriteLine(averageTemp);
+
+            temps.Sort();
+
+            Console.WriteLine(String.Join(",", temps));
+
+        }
         // 4: Students
         // Populate a list of student data with a firstname, surname and date of birth. Use a tuple.
         // Print the names of the oldest and youngest students

@@ -10,8 +10,13 @@ namespace CSharpStringsArraysAndLists
             //Examples.UsingAStringBuilder();
             //Examples.UsefulStringAndCharFunctions();
             //Examples.UsingArrays();
-            Examples.UsingLists();
-
+            //Examples.UsingLists();
+            Console.WriteLine("Coordinates");
+            Exercises.coordinates();
+            Console.WriteLine("ByteArray");
+            Exercises.byteArray();
+            Console.WriteLine("temperatures");
+            Exercises.Temperatures();
         }
 
 
